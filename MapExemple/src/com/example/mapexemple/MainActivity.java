@@ -64,7 +64,7 @@ public class MainActivity extends FragmentActivity {
 
 	public void infoStation() {
 		for (int i = 0; i < Points.Liste().size() - 1; i++) {
-			for (int j = 0; j < stations.Sts.size(); j++) {
+			for (int j = 0; j < stations.Sts.size() - 1; j++) {
 				if (Points.Liste().get(i).latitude == stations.Sts.get(j)
 						.getCoordonne().latitude
 						&& Points.Liste().get(i).longitude == stations.Sts.get(
@@ -75,10 +75,10 @@ public class MainActivity extends FragmentActivity {
 							.position(stations.Sts.get(j).getCoordonne())
 							.title(stations.Sts.get(j).getNomStation())
 							.snippet(
-									"voyageur(s) montant(s): " + Math.random()
+									"voyageur(s) montant(s): " +(int) Math.random()
 											* 50
 											+ "\n voyageur(s) descendant(s): "
-											+ Math.random() * 50));
+											+ (int)Math.random() * 50));
 
 				}
 			}
